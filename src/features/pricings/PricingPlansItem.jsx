@@ -22,7 +22,7 @@ function PricingPlansItem({ plan, text, price, type, color }) {
       <button
         className={`${
           color === "black" ? "bg-white text-black" : "bg-black text-white"
-        } w-full py-[1.2rem] text-[1.2rem] font-bold uppercase tracking-[0.2rem]`}
+        } w-full py-[1.2rem] text-[1.2rem] font-bold uppercase tracking-[0.2rem] transition-all duration-300 hover:bg-[#dfdfdf] hover:text-black `}
       >
         Pick plan
       </button>

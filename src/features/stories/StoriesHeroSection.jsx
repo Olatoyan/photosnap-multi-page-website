@@ -41,12 +41,7 @@ function StoriesHeroSection() {
             eastern Kentucky and West Virginia, and while the ridges are not
             high, the terrain is extremely rugged.
           </p>
-          <p className="flex items-center gap-3">
-            <span className="text-[1.2rem] font-bold uppercase tracking-[0.2rem]">
-              Read the story
-            </span>
-            <Cta color="white" />
-          </p>
+          <Cta color="white" text="read the story" />
         </div>
       </div>
       <div className="absolute left-0 top-0 h-full w-full bg-black bg-opacity-30"></div>

@@ -26,7 +26,7 @@ function PricingPlans() {
           Monthly
         </span>
         <div
-          className={`relative h-[3.2rem] w-[6.4rem] cursor-pointer rounded-full bg-[#dfdfdf] before:absolute before:left-[0.3rem] before:top-[0.3rem] before:h-[2.5rem] before:w-[2.5rem] before:rounded-full before:bg-black ${
+          className={`relative h-[3.2rem] w-[6.4rem] cursor-pointer rounded-full bg-[#dfdfdf] transition-all duration-300 before:absolute before:left-[0.3rem] before:top-[0.3rem] before:h-[2.5rem] before:w-[2.5rem] before:rounded-full before:bg-black before:transition-all before:duration-300 hover:bg-black hover:before:bg-white ${
             type === "month"
               ? "before:translate-x-0"
               : "before:translate-x-[120%]"

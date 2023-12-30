@@ -17,12 +17,9 @@ function Beta() {
         We’re in beta. <br />
         Get your invite <br /> today!
       </h2>
-      <p className="flex items-center gap-4">
-        <span className="text-[1.2rem] font-bold uppercase tracking-[0.2rem]">
-          Get an invite
-        </span>
-        <Cta color="white" />
-      </p>
+
+      <Cta color="white" text="Get an invite" />
+
       <div className="bg-lin-grad absolute left-0 h-[28rem] w-[0.6rem]"></div>
     </section>
   );
