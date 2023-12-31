@@ -19,9 +19,12 @@ function Header() {
         {isMenuOpen && isMobile && <Navbar handleClick={handleClick} />}
       </AnimatePresence>
       {!isMobile && <Navbar handleClick={handleClick} />}
-      <button className="bg-black px-10 py-5 text-[1.2rem] font-bold tracking-[0.2rem] text-white transition-all duration-300 hover:bg-opacity-30 hover:text-black mobile:hidden">
+      <motion.button
+        className="bg-black px-10 py-5 text-[1.2rem] font-bold tracking-[0.2rem] text-white transition-all duration-300 hover:bg-opacity-30 hover:text-black mobile:hidden"
+        whileHover={{ scale: 1.2 }}
+      >
         <Link to="/">Get an invite</Link>
-      </button>
+      </motion.button>
 
       <div className="hidden mobile:block" onClick={handleClick}>
         <motion.img

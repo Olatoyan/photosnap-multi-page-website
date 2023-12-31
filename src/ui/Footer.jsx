@@ -9,6 +9,7 @@ import {
 import { Link } from "react-router-dom";
 import Cta from "./Cta";
 import Reveal from "./Reveal";
+import { motion } from "framer-motion";
 
 function Footer() {
   const year = new Date().getFullYear();
@@ -23,19 +24,19 @@ function Footer() {
         />
         <Reveal>
           <div className="row-start-2 flex items-center gap-4 desktop:row-start-3 mobile:col-start-1 mobile:row-start-2">
-            <div className="hover:bg-fb flex h-[2.5rem] w-[2.5rem] cursor-pointer items-center justify-center rounded-full bg-white">
+            <div className="flex h-[2.5rem] w-[2.5rem] cursor-pointer items-center justify-center rounded-full bg-white hover:bg-fb">
               <RiFacebookFill size="2rem" color="black" />
             </div>
-            <div className="hover:bg-yt flex h-[2.5rem] w-[2.5rem] cursor-pointer items-center justify-center rounded-full bg-white">
+            <div className="flex h-[2.5rem] w-[2.5rem] cursor-pointer items-center justify-center rounded-full bg-white hover:bg-yt">
               <RiYoutubeFill size="1.5rem" color="black" />
             </div>
-            <div className="hover:bg-x flex h-[2.5rem] w-[2.5rem] cursor-pointer items-center justify-center rounded-full bg-white">
+            <div className="flex h-[2.5rem] w-[2.5rem] cursor-pointer items-center justify-center rounded-full bg-white hover:bg-x">
               <RiTwitterFill size="2rem" color="black" />
             </div>
-            <div className="hover:bg-pin flex h-[2.5rem] w-[2.5rem] cursor-pointer items-center justify-center rounded-full bg-white">
+            <div className="flex h-[2.5rem] w-[2.5rem] cursor-pointer items-center justify-center rounded-full bg-white hover:bg-pin">
               <RiPinterestFill size="2rem" color="black" />
             </div>
-            <div className="hover:bg-ig flex h-[2.5rem] w-[2.5rem] cursor-pointer items-center justify-center rounded-full bg-white">
+            <div className="flex h-[2.5rem] w-[2.5rem] cursor-pointer items-center justify-center rounded-full bg-white hover:bg-ig">
               <RiInstagramFill size="2rem" color="black" />
             </div>
           </div>
@@ -44,26 +45,38 @@ function Footer() {
         <div className="col-start-2 row-start-1 row-end-2 desktop:col-start-1 desktop:row-start-2 mobile:col-start-1 mobile:row-start-3 mobile:row-end-4">
           <ul className="flex flex-col items-start gap-7 desktop:flex-row mobile:flex-col mobile:items-center">
             <Reveal>
-              <li className="text-[1.2rem] font-bold uppercase tracking-[0.2rem] text-white transition-all duration-300 hover:opacity-30">
+              <motion.li
+                whileHover={{ scale: 1.1 }}
+                className="text-[1.2rem] font-bold uppercase tracking-[0.2rem] text-white transition-all duration-300 hover:opacity-30"
+              >
                 <Link to="/">Home</Link>
-              </li>
+              </motion.li>
             </Reveal>
             <Reveal>
-              <li className="text-[1.2rem] font-bold uppercase tracking-[0.2rem] text-white transition-all duration-300 hover:opacity-30">
+              <motion.li
+                whileHover={{ scale: 1.1 }}
+                className="text-[1.2rem] font-bold uppercase tracking-[0.2rem] text-white transition-all duration-300 hover:opacity-30"
+              >
                 <Link to="/stories">Stories</Link>
-              </li>
+              </motion.li>
             </Reveal>
 
             <Reveal>
-              <li className="text-[1.2rem] font-bold uppercase tracking-[0.2rem] text-white transition-all duration-300 hover:opacity-30">
+              <motion.li
+                whileHover={{ scale: 1.1 }}
+                className="text-[1.2rem] font-bold uppercase tracking-[0.2rem] text-white transition-all duration-300 hover:opacity-30"
+              >
                 <Link to="/features">Features</Link>
-              </li>
+              </motion.li>
             </Reveal>
 
             <Reveal>
-              <li className="text-[1.2rem] font-bold uppercase tracking-[0.2rem] text-white transition-all duration-300 hover:opacity-30">
+              <motion.li
+                whileHover={{ scale: 1.1 }}
+                className="text-[1.2rem] font-bold uppercase tracking-[0.2rem] text-white transition-all duration-300 hover:opacity-30"
+              >
                 <Link to="/pricing">Pricing</Link>
-              </li>
+              </motion.li>
             </Reveal>
           </ul>
         </div>
