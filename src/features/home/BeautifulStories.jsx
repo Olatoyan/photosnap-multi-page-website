@@ -5,7 +5,6 @@ import RevealImg from "../../ui/RevealImg";
 
 function BeautifulStories() {
   const controls = useAnimation();
-  console.log(controls);
 
   const variants = {
     hidden: { opacity: 0, y: 20 },
