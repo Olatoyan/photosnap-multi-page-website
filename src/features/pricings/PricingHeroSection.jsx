@@ -35,7 +35,7 @@ function PricingHeroSection() {
           />
         </picture>
       </RevealImg>
-      <div className="bg-lin-grad absolute left-0 h-[14.4rem] w-[0.6rem]"></div>
+      <div className="bg-lin-grad absolute left-0 h-[14.4rem] w-[0.6rem] mobile:left-10 mobile:top-[51.5%] mobile:h-[0.6rem] mobile:w-[12.8rem]"></div>
     </section>
   );
 }

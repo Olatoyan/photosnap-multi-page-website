@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,7 +15,9 @@ function Header() {
       <Link to="/">
         <img src="./shared/desktop/logo.svg" alt="logo of photosnap" />
       </Link>
-      <Navbar isMenuOpen={isMenuOpen} handleClick={handleClick} />
+      <AnimatePresence>
+        {isMenuOpen && <Navbar handleClick={handleClick} />}
+      </AnimatePresence>
       <button className="bg-black px-10 py-5 text-[1.2rem] font-bold tracking-[0.2rem] text-white transition-all duration-300 hover:bg-opacity-30 hover:text-black mobile:hidden">
         <Link to="/">Get an invite</Link>
       </button>

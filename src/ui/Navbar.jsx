@@ -1,11 +1,13 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
-function Navbar({ isMenuOpen, handleClick }) {
+function Navbar({ handleClick }) {
   return (
-    <nav
-      className={`mobile:absolute mobile:left-0 mobile:top-[7rem] mobile:w-full mobile:bg-white ${
-        isMenuOpen ? "mobile:block" : "mobile:hidden"
-      }`}
+    <motion.nav
+      className={`z-10 mobile:absolute mobile:left-0 mobile:top-[7rem] mobile:w-full  mobile:bg-white`}
+      initial={{ opacity: 0, scaleY: 0.5 }}
+      animate={{ opacity: 1, scaleY: 1 }}
+      exit={{ opacity: 0, scaleY: 0.5 }}
     >
       <ul className="flex items-center gap-[3.7rem] uppercase mobile:flex-col mobile:gap-0 mobile:px-8 mobile:pb-8 mobile:pt-12">
         <li
@@ -33,7 +35,7 @@ function Navbar({ isMenuOpen, handleClick }) {
           <Link to="/">Get an invite</Link>
         </li>
       </ul>
-    </nav>
+    </motion.nav>
   );
 }
 
