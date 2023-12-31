@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 function Navbar({ handleClick }) {
   return (
     <motion.nav
-      className={`z-10 mobile:absolute mobile:left-0 mobile:top-[7rem] mobile:w-full  mobile:bg-white`}
+      className={`z-10 mobile:absolute mobile:left-0 mobile:top-[7rem] mobile:w-full  mobile:bg-white `}
       initial={{ opacity: 0, scaleY: 0.5 }}
       animate={{ opacity: 1, scaleY: 1 }}
       exit={{ opacity: 0, scaleY: 0.5 }}

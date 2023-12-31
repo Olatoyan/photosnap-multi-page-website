@@ -52,7 +52,7 @@ function BeautifulStories() {
           </p>
         </Reveal>
         <Reveal>
-          <Cta color="black" text="View The stories" />
+          <Cta color="black" text="View The stories" to="stories" />
         </Reveal>
       </div>
     </motion.section>
