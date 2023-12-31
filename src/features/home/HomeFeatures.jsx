@@ -1,4 +1,6 @@
+import { useEffect, useRef } from "react";
 import FeaturesItem from "../../ui/FeaturesItem";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 const items = [
   {
@@ -19,12 +21,51 @@ const items = [
 ];
 
 function HomeFeatures() {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const mainControls = useAnimation();
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView, mainControls]);
+
+  const listItemVariants = {
+    hidden: { opacity: 0, scale: 0.8, y: -50 },
+    visible: { opacity: 1, scale: 1, y: 0 },
+    transition: {
+      type: "spring",
+      damping: 15,
+      stiffness: 300,
+      duration: 1,
+      bounce: 0.5,
+    },
+  };
+
+  const staggerContainerVariants = {
+    visible: {
+      transition: {
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const staggeredChildrenTransition = {
+    variants: staggerContainerVariants,
+    initial: "hidden",
+    animate: mainControls,
+  };
+
   return (
-    <section className="desktop:grid-cols-1 desktop:px-36 mobile:px-8 grid grid-cols-3 gap-12 px-[16.5rem] py-48">
+    <motion.section
+      className="grid grid-cols-3 gap-12 px-[16.5rem] py-48 desktop:grid-cols-1 desktop:px-36 mobile:px-8"
+      ref={ref}
+      {...staggeredChildrenTransition}
+    >
       {items.map((item) => (
-        <FeaturesItem key={item.title} {...item} />
+        <FeaturesItem key={item.title} {...item} variants={listItemVariants} />
       ))}
-    </section>
+    </motion.section>
   );
 }
 
